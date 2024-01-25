@@ -1,0 +1,3 @@
+path('api/user/<str:user_id>/', UserModelView.as_view(), name='my-model'),----> this url for creating user id from received http request
+
+use post method (http://127.0.0.1:8000/api/user/100/)---> post man

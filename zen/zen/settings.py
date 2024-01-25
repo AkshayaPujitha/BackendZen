@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "zenapp.apps.ZenappConfig"
+    "zenapp.apps.ZenappConfig",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
