@@ -19,3 +19,11 @@ class UserProblemImage(models.Model):
     user_problem = models.ForeignKey(UserProblem, related_name='images', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='user_problem_images/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
+
+
+class ZenCoins(models.Model):
+    user = models.OneToOneField(UserModel, primary_key=True, on_delete=models.CASCADE)
+    zen_coins = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.user} - {self.zen_coins} Zen Coins"
