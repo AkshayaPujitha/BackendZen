@@ -1,7 +1,7 @@
 from django.db import models
 
 class UserModel(models.Model):
-    user = models.CharField(max_length=255)
+    user = models.IntegerField(primary_key=True, unique=True)
     def __str__(self):
         return f"{self.user}"
     
@@ -27,3 +27,6 @@ class ZenCoins(models.Model):
 
     def __str__(self):
         return f"{self.user} - {self.zen_coins} Zen Coins"
+    
+class UploadedImage(models.Model):
+    image = models.ImageField(upload_to='user_problem_images/')

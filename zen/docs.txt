@@ -1,3 +1,8 @@
 path('api/user/<str:user_id>/', UserModelView.as_view(), name='my-model'),----> this url for creating user id from received http request
 
 use post method (http://127.0.0.1:8000/api/user/100/)---> post man
+
+
+http://127.0.0.1:8000/api/upload/ -----> Post method 
+
+data is in the form of form data contial image,description,user(image is File type)
